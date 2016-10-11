@@ -55,13 +55,15 @@
     <Compile Include="Shared\Models\OrderItem.cs" />
     <Compile Include="Shared\Models\PaymentDetails.cs" />
     <Compile Include="Shared\Models\ShoppingCart.cs" />
+    <Compile Include="Solution\Services\Abstract\INotificationService.cs" />
+    <Compile Include="Solution\Services\Abstract\IPaymentService.cs" />
+    <Compile Include="Solution\Services\Abstract\IReservationService.cs" />
+    <Compile Include="Solution\Services\Concrete\Order.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Solution\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
