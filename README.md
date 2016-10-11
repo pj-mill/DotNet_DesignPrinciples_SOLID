@@ -29,7 +29,6 @@ This class is trying to do the following
 1. Update Inventory
 2. Notify the customer
 3. Charge a credit card
-4. Logging
 
 These are not the responsibility of the Order class.
 
@@ -37,8 +36,6 @@ These are not the responsibility of the Order class.
 Check out the 'Solution' folder in the 'SingleResponsibilityPrinciple' project.
 
 We need to refacter the code so that inventory management, customer notification and payment services are sperated into their respective interfaces/classes.
-
-We also want to refactor the Order class to facilitate different Order types
 
 ---
 
