@@ -15,6 +15,19 @@ Developed with Visual Studio 2015 Community
 
 ---
 
+### Single Responsibility Principle (SRP)
+
+#### DEFINITION
+A class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class).
+
+
+#### THE PROBLEM
+
+
+#### THE SOLUTION
+
+---
+
 ###Resources
 |Title|Author|Website|
 |-----|------|-------|
