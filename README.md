@@ -39,6 +39,7 @@ Check out the 'Solution' folder in the 'SingleResponsibilityPrinciple' project.
 We need to refacter the code so that inventory management, customer notification and payment services are sperated into their respective interfaces/classes.
 
 We also want to refactor the Order class to facilitate different Order types
+
 ---
 
 ###Resources
