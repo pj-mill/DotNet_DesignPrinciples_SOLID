@@ -22,7 +22,7 @@ A class should have only a single responsibility (i.e. only one potential change
 
 
 #### THE PROBLEM
-Check out the 'Order' class under the problems folder in the 'SingleResponsibilityPrinciple' project
+Check out the 'Order' class under the 'Problem' folder in the 'SingleResponsibilityPrinciple' project
 
 This class is trying to do the following
 
@@ -34,6 +34,9 @@ This class is trying to do the following
 These are not the responsibility of the Order class.
 
 #### THE SOLUTION
+Check out the 'Solution' folder in the 'SingleResponsibilityPrinciple' project.
+
+We need to refacter the code so that inventory management, customer notification and payment services are sperated into their respective interfaces/classes.
 
 ---
 
