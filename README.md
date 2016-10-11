@@ -25,6 +25,7 @@ A class should have only a single responsibility (i.e. only one potential change
 Check out the 'Order' class under the problems folder in the 'SingleResponsibilityPrinciple' project
 
 This class is trying to do the following
+
 1. Update Inventory
 2. Notify the customer
 3. Charge a credit card
