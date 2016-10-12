@@ -14,19 +14,6 @@ Developed with Visual Studio 2015 Community
 |C#|
 
 ---
-### Principles Covered
-
-|Principle|Design Pattern Used|
-|---------|-------------------|
-|SRP||
-|OCP|Strategy Pattern|
-|LSP| |
-|ISP| |
-|DIP| |
-
-The design patterns used to implement each principle are for these exercises only. Other patterns may be more suitable depending on each solution and your own style of coding.
-
----
 ### N.B.
 
 Keep in mind that there’s probably no design that guarantees that you won’t have to change it at some point. The key is to identify those areas in your domain that are volatile and likely to change over time.
@@ -87,26 +74,20 @@ A second price calculator has been provided ('AlternativePriceCalcuator') that a
 
 ---
 
-### Liskovs Substitution Principle (LSP)
+### Interface Segregation Principle (ISP)
 
 #### DEFINITION
-Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program
-
-i.e. you should be able to use any derived class instead of a parent class and have it behave in the same manner without modification
-
-If a base class defines two abstract methods then a derived class must give meaningful implementations of both. If a derived class implements a method with ‘throw new NotImplementedException’ then it means that the derived class is not fully substitutable for its base class. In that case you’ll probably need to reconsider your class hierarchy.
-
-We should be familiar with the ‘IS-A’ relationship between a base class and a derived class: a Dog is an Animal, a Clerk is an Employee which is a Person, a Car is a vehicle etc. LSP refines this relationship with ‘IS-SUBSTITUTABLE-FOR’, meaning that an object is substitutable with another object in all situations without running into exceptions and unexpected behaviour.
+Many client-specific interfaces are better than one general-purpose interface
 
 #### THE PROBLEM
-Check out the 'Problem' folder in the 'LiskovSubstitutionPrinciple' project
+Check out the 'Problem' folder in the 'InterfaceSegregationPrinciple' project
 
 We have 3 classes, 'ApplicationSettings', 'UserSettings', and 'ReadOnlySettings'. All of which implements the 'ISettings' interface that contains 2 methods; 'Load' and 'Persist'.
 
-The problem lies with the 'ReadOnlySettings' class in that it does not require the 'Persist' method, and so throws a 'NotImplementedException' instead which violates LSP.
+The problem lies with the 'ReadOnlySettings' class in that it does not require the 'Persist' method, and so throws a 'NotImplementedException' instead which violates ISP.
 
 #### THE SOLUTION
-Check out the 'Solution' folder in the 'LiskovSubstitutionPrinciple' project
+Check out the 'Solution' folder in the 'InterfaceSegregationPrinciple' project
 
 We split the 'ISettings' interface into 2 specific interfaces 'IReadSettings' and 'IWriteSettings'. 'ApplicationSettings' and 'UserSettings' classes implement both interfaces however, 'ReadOnlySettings' only implements the 'IReadSettings' interface.
 
