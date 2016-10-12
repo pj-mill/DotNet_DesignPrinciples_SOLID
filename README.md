@@ -46,7 +46,7 @@ Software entities should be open for extension, but closed for modification.
 
 
 #### THE PROBLEM
-Check out the 'Order' class under the 'Problem' folder in the 'OpenClosedPrinciple' project
+Check out the 'ShoppingCart' class under the 'Problem' folder in the 'OpenClosedPrinciple' project
 
 The problem lies with the 'TotalAmount' function. It uses several IF/ELSE statements to decide how to calculate the price total. 
 
@@ -62,7 +62,7 @@ In the real world, pricing strategies change all the time so adding more rules o
 #### THE SOLUTION
 Check out the 'Solution' folder in the 'OpenClosedPrinciple' project.
 
-We will use the 'Strategy Pattern' to seperate pricing rules and inject the appropriate one when needed.
+We will use the 'Strategy Pattern' to seperate pricing rules and inject the appropriate one for each order item.
 
 ---
 
