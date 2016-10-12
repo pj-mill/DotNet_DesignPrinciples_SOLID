@@ -91,7 +91,7 @@ Although both are quadrilaterals, the area is calculated differently. This means
 #### THE SOLUTION
 Check out the 'Solution' folder in the 'LiskovSubstitutionPrinciple' project
 
-We created a common abstract class that both the rectangle and square objects derive from. This abstract class contains a method to calculate the area that lets each shape define its own Area.
+We created a common abstract class that both the rectangle and square objects derive from. This abstract class contains a method to calculate the area that lets each shape define its own area.
 
 ---
 
