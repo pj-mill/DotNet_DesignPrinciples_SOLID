@@ -73,6 +73,8 @@ A second price calculator has been provided ('AlternativePriceCalcuator') that a
 #### DEFINITION
 Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program
 
+i.e. you should be able to use any derived class instead of a parent class and have it behave in the same manner without modification
+
 If a base class defines two abstract methods then a derived class must give meaningful implementations of both. If a derived class implements a method with ‘throw new NotImplementedException’ then it means that the derived class is not fully substitutable for its base class. In that case you’ll probably need to reconsider your class hierarchy.
 
 We chould be familiar with the ‘IS-A’ relationship between a base class and a derived class: a Dog is an Animal, a Clerk is an Employee which is a Person, a Car is a vehicle etc. LSP refines this relationship with ‘IS-SUBSTITUTABLE-FOR’, meaning that an object is substitutable with another object in all situations without running into exceptions and unexpected behaviour.
