@@ -35,7 +35,33 @@ These are not the responsibility of the Order class.
 #### THE SOLUTION
 Check out the 'Solution' folder in the 'SingleResponsibilityPrinciple' project.
 
-We need to refacter the code so that inventory management, customer notification and payment services are seperated into their respective interfaces, and refactor the 'Order' class so that these services are injected into it.
+We refactered the code so that inventory management, customer notification and payment services are seperated into their respective interfaces, and then injected these services into the 'Order' class.
+
+---
+
+### Open Closed Principle (OCP)
+
+#### DEFINITION
+Software entities should be open for extension, but closed for modification.
+
+
+#### THE PROBLEM
+Check out the 'Order' class under the 'Problem' folder in the 'OpenClosedPrinciple' project
+
+The problem lies with the 'TotalAmount' function. It uses an IF/ELSE statement to decide how to calculate the price total. In the real world, pricing strategies change all the time so adding more rules or changing existing rules will lead to more complex code, introduction of new bugs, re-testing the function.
+
+Here are some additional pricing strategies that might need to be introduced further down the line.
+
+1. Price per unit
+2. Price per unit of weight, such as price per kilogram
+3. Special discount prices: buy 3, get 1 for free
+4. Price depending on the Customer’s loyalty: loyal customers get 10% off
+
+
+#### THE SOLUTION
+Check out the 'Solution' folder in the 'OpenClosedPrinciple' project.
+
+We will use the 'Strategy Pattern' to seperate pricing rules and inject the appropriate one when needed.
 
 ---
 
