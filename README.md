@@ -101,8 +101,10 @@ We should be familiar with the ‘IS-A’ relationship between a base class and 
 #### THE PROBLEM
 Check out the 'RefundService' class under the 'Problem' folder in the 'LiskovSubstitutionPrinciple' project
 
-The problems are numerous so I've listed them directly inside the 'RefundService' class.
+The problems are numerous so I've listed them directly inside the 'RefundService' class, but basically we are unable to work with a 'PaymentBase' instance without checking it first, therefore we cannot substitute the subtype for its base type.
 
+#### THE SOLUTION
+Check out the 'Solution' folder in the 'LiskovSubstitutionPrinciple' project
 
 ---
 
