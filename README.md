@@ -64,7 +64,7 @@ Check out the 'Solution' folder in the 'OpenClosedPrinciple' project.
 
 We will use the 'Strategy Pattern' to seperate pricing rules into their own class. We then define a price calculator ('DefaultPriceCalcuator') that creates a list of all price strategies, decides which one is appropriate and performs the actual calculation.
 
-A second price calculator has bee provided ('AlternativePriceCalcuator') that alloes us to inject the strategies as an ienumerable (IEnumerable). This way it is up to the caller to specify which strategies this calculator should use, making the calculator flexible and totaly independent on specific implementations of IPriceStrategy. 
+A second price calculator has been provided ('AlternativePriceCalcuator') that allows us to inject the strategies as an IEnumerable. This way it is up to the caller to specify which strategies this calculator should use, making the calculator more flexible and totaly independent on specific implementations of IPriceStrategy. 
 
 ---
 
