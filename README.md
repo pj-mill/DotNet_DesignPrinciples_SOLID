@@ -103,6 +103,8 @@ Check out the 'RefundService' class under the 'Problem' folder in the 'LiskovSub
 
 The problems are numerous so I've listed them directly inside the 'RefundService' class, but basically we are unable to work with a 'PaymentBase' instance without checking it first, therefore we cannot substitute the subtype for its base type.
 
+N.B. there are actually a couple of principles being violated here.
+
 #### THE SOLUTION
 Check out the 'Solution' folder in the 'LiskovSubstitutionPrinciple' project
 
