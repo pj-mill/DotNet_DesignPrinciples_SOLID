@@ -15,6 +15,14 @@ Developed with Visual Studio 2015 Community
 
 ---
 
+|Principle|Design Pattern Used|
+|---------|-------------------|
+|SRP||
+|OCP|Strategy Pattern|
+|LSP| |
+
+---
+
 ### Single Responsibility Principle (SRP)
 
 #### DEFINITION
