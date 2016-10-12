@@ -62,7 +62,9 @@ In the real world, pricing strategies change all the time so adding more rules o
 #### THE SOLUTION
 Check out the 'Solution' folder in the 'OpenClosedPrinciple' project.
 
-We will use the 'Strategy Pattern' to seperate pricing rules and inject the appropriate one for each order item.
+We will use the 'Strategy Pattern' to seperate pricing rules into their own class. We then define a price calculator ('DefaultPriceCalcuator') that creates a list of all price strategies, decides which one is appropriate and performs the actual calculation.
+
+A second price calculator has bee provided ('AlternativePriceCalcuator') that alloes us to inject the strategies as an ienumerable (IEnumerable). This way it is up to the caller to specify which strategies this calculator should use, making the calculator flexible and totaly independent on specific implementations of IPriceStrategy. 
 
 ---
 
