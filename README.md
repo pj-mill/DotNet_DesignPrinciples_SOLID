@@ -118,7 +118,9 @@ We split the 'ISettings' interface into 2 specific interfaces 'IReadSettings' an
 ### Dependency Inversion Principle (DIP)
 
 #### DEFINITION
-One should Depend upon abstractions, not on concretions
+One should Depend upon abstractions, not on concretions.
+
+DIP helps decouple your code. The frequency of the ‘new’ keyword in your code is a rough estimate of the degree of coupling in your object structure.
 
 #### THE PROBLEM
 
