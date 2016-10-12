@@ -69,7 +69,7 @@ Check out the 'ShoppingCart' class under the 'Problem' folder in the 'OpenClosed
 
 The problem lies with the 'TotalAmount' function. It uses several IF/ELSE statements to decide how to calculate the price total. 
 
-Here are some additional pricing strategies that might need to be introduced further down the line.
+Further more, there maybe some additional pricing strategies that might need to be introduced further down the line.
 
 1. Price per unit
 2. Price per unit of weight, such as price per kilogram
