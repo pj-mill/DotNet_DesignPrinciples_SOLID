@@ -99,14 +99,16 @@ If a base class defines two abstract methods then a derived class must give mean
 We should be familiar with the ‘IS-A’ relationship between a base class and a derived class: a Dog is an Animal, a Clerk is an Employee which is a Person, a Car is a vehicle etc. LSP refines this relationship with ‘IS-SUBSTITUTABLE-FOR’, meaning that an object is substitutable with another object in all situations without running into exceptions and unexpected behaviour.
 
 #### THE PROBLEM
-Check out the 'RefundService' class under the 'Problem' folder in the 'LiskovSubstitutionPrinciple' project
+Check out the 'Problem' folder in the 'LiskovSubstitutionPrinciple' project
 
-The problems are numerous so I've listed them directly inside the 'RefundService' class, but basically we are unable to work with a 'PaymentBase' instance without checking it first, therefore we cannot substitute the subtype for its base type.
+We have 3 classes, 'ApplicationSettings', 'UserSettings', and 'ReadOnlySettings'. All of which implements the 'ISettings' interface that contains 2 methods; 'Load' and 'Persist'.
 
-N.B. there are actually a couple of principles being violated here.
+The problem lies with the 'ReadOnlySettings' class in that it does not require the 'Persist' method, and so throws a 'NotImplementedException' instead which violates LSP.
 
 #### THE SOLUTION
 Check out the 'Solution' folder in the 'LiskovSubstitutionPrinciple' project
+
+We split the 'ISettings' interface into 2 specific interfaces 'IReadSettings' and 'IWriteSettings'. 'ApplicationSettings' and 'UserSettings' classes implement both interfaces however, 'ReadOnlySettings' only implements the 'IReadSettings' interface.
 
 ---
 
