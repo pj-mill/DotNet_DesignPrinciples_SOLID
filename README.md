@@ -45,4 +45,4 @@ We need to refacter the code so that inventory management, customer notification
 |[SOLID Principles in C# - An Overview](http://www.codeguru.com/columns/experts/solid-principles-in-c-an-overview.htm)| V.N.S Arun| codeguru|
 |[SOLID Principles in C#](http://www.c-sharpcorner.com/uploadfile/damubetha/solid-principles-in-c-sharp/)|Damodhar Naidu|C# Corner|
 |[SOLID design principles in .NET: the Single Responsibility Principle](https://dotnetcodr.com/2013/08/12/solid-design-principles-in-net-the-single-responsibility-principle/)|Andras Nemes|dotnetcodr|
-|[SOLID (object-oriented design)](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)||Wikipedia|
+|[SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)||Wikipedia|
