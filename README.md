@@ -21,6 +21,10 @@ Developed with Visual Studio 2015 Community
 |SRP||
 |OCP|Strategy Pattern|
 |LSP| |
+|ISP| |
+|DIP| |
+
+The design patterns used to implement each principle are for these exercises only. Other patterns may be more suitable depending on each solution.
 
 ---
 ### N.B.
