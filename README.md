@@ -54,7 +54,7 @@ The implementation of these are not the responsibility of the Order class.
 #### THE SOLUTION
 Check out the 'Solution' folder in the 'SingleResponsibilityPrinciple' project.
 
-We refactered the code so that inventory management, customer notification and payment services are seperated into their respective interfaces. These services are injected into the 'Order' class which simply calls then without knowing anything about their implementation.
+We refactered the code so that inventory management, customer notification and payment services are seperated into their respective interfaces. These services are injected into the 'Order' class which simply calls them without knowing anything about their implementation.
 
 ---
 
