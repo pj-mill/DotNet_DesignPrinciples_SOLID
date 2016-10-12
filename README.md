@@ -73,6 +73,29 @@ We will use the 'Strategy Pattern' to seperate pricing rules into their own clas
 A second price calculator has been provided ('AlternativePriceCalcuator') that allows us to inject the strategies as an IEnumerable. This way it is up to the caller to specify which strategies this calculator should use, making the calculator more flexible and totaly independent on specific implementations of IPriceStrategy. 
 
 ---
+### Liskov Substitution Principle (LSP)
+
+Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program
+
+i.e. you should be able to use any derived class instead of a parent class and have it behave in the same manner without modification
+
+If a base class defines two abstract methods then a derived class must give meaningful implementations of both. If a derived class implements a method with ‘throw new NotImplementedException’ then it means that the derived class is not fully substitutable for its base class. In that case you’ll probably need to reconsider your class hierarchy.
+
+We should be familiar with the ‘IS-A’ relationship between a base class and a derived class: a Dog is an Animal, a Clerk is an Employee which is a Person, a Car is a vehicle etc. LSP refines this relationship with ‘IS-SUBSTITUTABLE-FOR’, meaning that an object is substitutable with another object in all situations without running into exceptions and unexpected behaviour.
+
+#### THE PROBLEM
+Check out the 'Problem' folder in the 'LiskovSubstitutionPrinciple' project
+
+We have 2 classes 'Rectangle' and'Square'. Square derives from rectangle which has length and width properties along with a method that calculates the area.
+
+Although both are quadrilaterals, the area is calculated differently. This means that even though the Square class is a subset of the Rectangle class, the Object of Rectangle class is not substitutable by object of the Square class without causing a problem in the system.
+
+#### THE SOLUTION
+Check out the 'Solution' folder in the 'LiskovSubstitutionPrinciple' project
+
+We created a common abstract class that both the rectangle and square objects derive from. This abstract class contains a method to calculate the area that lets each shape define its own Area.
+
+---
 
 ### Interface Segregation Principle (ISP)
 
