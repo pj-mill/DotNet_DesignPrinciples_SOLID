@@ -20,6 +20,7 @@ Developed with Visual Studio 2015 Community
 #### DEFINITION
 A class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class).
 
+SRP is strongly related to what is called Separation of Concerns (SoC)
 
 #### THE PROBLEM
 Check out the 'Order' class under the 'Problem' folder in the 'SingleResponsibilityPrinciple' project
@@ -30,7 +31,7 @@ This class is trying to do the following
 2. Notify the customer
 3. Charge a credit card
 
-These are not the responsibility of the Order class.
+The implementation of these are not the responsibility of the Order class.
 
 #### THE SOLUTION
 Check out the 'Solution' folder in the 'SingleResponsibilityPrinciple' project.
