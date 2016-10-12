@@ -14,12 +14,18 @@ Developed with Visual Studio 2015 Community
 |C#|
 
 ---
+### Principles Covered
 
 |Principle|Design Pattern Used|
 |---------|-------------------|
 |SRP||
 |OCP|Strategy Pattern|
 |LSP| |
+
+---
+### N.B.
+
+Keep in mind that there’s probably no design that guarantees that you won’t have to change it at some point. The key is to identify those areas in your domain that are volatile and likely to change over time.
 
 ---
 
