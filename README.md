@@ -119,3 +119,4 @@ We split the 'ISettings' interface into 2 specific interfaces 'IReadSettings' an
 |[SOLID Principles in C#](http://www.c-sharpcorner.com/uploadfile/damubetha/solid-principles-in-c-sharp/)|Damodhar Naidu|C# Corner|
 |[Architecture and patterns](https://dotnetcodr.com/architecture-and-patterns/)|Andras Nemes|dotnetcodr|
 |[SOLID (object oriented design)](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design))||Wikipedia|
+|[A Good Example of Liskov Substitution Principle](https://lassala.net/2010/11/04/a-good-example-of-liskov-substitution-principle/)||Claudio Lassala's Blog|
