@@ -35,7 +35,7 @@ These are not the responsibility of the Order class.
 #### THE SOLUTION
 Check out the 'Solution' folder in the 'SingleResponsibilityPrinciple' project.
 
-We need to refacter the code so that inventory management, customer notification and payment services are sperated into their respective interfaces/classes.
+We need to refacter the code so that inventory management, customer notification and payment services are seperated into their respective interfaces, and refactor the 'Order' class so that these services are injected into it.
 
 ---
 
