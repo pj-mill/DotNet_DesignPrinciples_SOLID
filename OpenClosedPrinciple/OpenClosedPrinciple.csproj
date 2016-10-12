@@ -52,13 +52,20 @@
     <Compile Include="Shared\Models\OrderItem.cs" />
     <Compile Include="Shared\Models\PaymentDetails.cs" />
     <Compile Include="Problem\ShoppingCart.cs" />
+    <Compile Include="Solution\PriceCalculators\AlternativePriceCalculator.cs" />
+    <Compile Include="Solution\PriceCalculators\DefaultPriceCalculator.cs" />
+    <Compile Include="Solution\PriceCalculators\IPriceCalculator.cs" />
+    <Compile Include="Solution\PriceStrategies\BuyThreeGetOneFreeStrategy.cs" />
+    <Compile Include="Solution\PriceStrategies\IPriceStrategy.cs" />
+    <Compile Include="Solution\PriceStrategies\PricePerKiloStrategy.cs" />
+    <Compile Include="Solution\PriceStrategies\PricePerUnitStrategy.cs" />
+    <Compile Include="Solution\PriceStrategies\SpecialPriceStrategy.cs" />
+    <Compile Include="Solution\ShoppingCart.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Solution\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
