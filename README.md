@@ -115,6 +115,17 @@ Check out the 'Solution' folder in the 'InterfaceSegregationPrinciple' project
 We split the 'ISettings' interface into 2 specific interfaces 'IReadSettings' and 'IWriteSettings'. 'ApplicationSettings' and 'UserSettings' classes implement both interfaces however, 'ReadOnlySettings' only implements the 'IReadSettings' interface.
 
 ---
+### Dependency Inversion Principle (DIP)
+
+#### DEFINITION
+One should Depend upon abstractions, not on concretions
+
+#### THE PROBLEM
+
+
+#### THE SOLUTION
+
+---
 
 ###Resources
 |Title|Author|Website|
