@@ -73,11 +73,34 @@ We will use the 'Strategy Pattern' to seperate pricing rules into their own clas
 A second price calculator has been provided ('AlternativePriceCalcuator') that allows us to inject the strategies as an IEnumerable. This way it is up to the caller to specify which strategies this calculator should use, making the calculator more flexible and totaly independent on specific implementations of IPriceStrategy. 
 
 ---
+### Liskov Substitution Principle (LSP)
+
+Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program
+
+i.e. you should be able to use any derived class instead of a parent class and have it behave in the same manner without modification
+
+We should be familiar with the ‘IS-A’ relationship between a base class and a derived class: a Dog is an Animal, a Clerk is an Employee which is a Person, a Car is a vehicle etc. LSP refines this relationship with ‘IS-SUBSTITUTABLE-FOR’, meaning that an object is substitutable with another object in all situations without running into exceptions and unexpected behaviour.
+
+#### THE PROBLEM
+Check out the 'Problem' folder in the 'LiskovSubstitutionPrinciple' project
+
+We have 2 classes 'Rectangle' and'Square'. Square derives from rectangle which has length and width properties along with a method that calculates the area.
+
+Although both are quadrilaterals, the area is calculated differently. This means that even though the Square class is a subset of the Rectangle class, the Object of Rectangle class is not substitutable by object of the Square class without causing a problem in the system.
+
+#### THE SOLUTION
+Check out the 'Solution' folder in the 'LiskovSubstitutionPrinciple' project
+
+We created a common abstract class that both the rectangle and square objects derive from. This abstract class contains a method to calculate the area that lets each shape define its own area.
+
+---
 
 ### Interface Segregation Principle (ISP)
 
 #### DEFINITION
 Many client-specific interfaces are better than one general-purpose interface
+
+If a base class defines two abstract methods then a derived class must give meaningful implementations of both. If a derived class implements a method with ‘throw new NotImplementedException’ then it means that the derived class is not fully substitutable for its base class. In that case you’ll probably need to reconsider your class hierarchy.
 
 #### THE PROBLEM
 Check out the 'Problem' folder in the 'InterfaceSegregationPrinciple' project
@@ -92,6 +115,19 @@ Check out the 'Solution' folder in the 'InterfaceSegregationPrinciple' project
 We split the 'ISettings' interface into 2 specific interfaces 'IReadSettings' and 'IWriteSettings'. 'ApplicationSettings' and 'UserSettings' classes implement both interfaces however, 'ReadOnlySettings' only implements the 'IReadSettings' interface.
 
 ---
+### Dependency Inversion Principle (DIP)
+
+#### DEFINITION
+One should Depend upon abstractions, not on concretions.
+
+DIP helps decouple your code. The frequency of the ‘new’ keyword in your code is a rough estimate of the degree of coupling in your object structure.
+
+#### THE PROBLEM
+
+
+#### THE SOLUTION
+
+---
 
 ###Resources
 |Title|Author|Website|
@@ -100,4 +136,4 @@ We split the 'ISettings' interface into 2 specific interfaces 'IReadSettings' an
 |[SOLID Principles in C#](http://www.c-sharpcorner.com/uploadfile/damubetha/solid-principles-in-c-sharp/)|Damodhar Naidu|C# Corner|
 |[Architecture and patterns](https://dotnetcodr.com/architecture-and-patterns/)|Andras Nemes|dotnetcodr|
 |[SOLID (object oriented design)](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design))||Wikipedia|
-|[A Good Example of Liskov Substitution Principle](https://lassala.net/2010/11/04/a-good-example-of-liskov-substitution-principle/)||Claudio Lassala's Blog|
+|[Simplifying the Liskov Substitution Principle of SOLID in C#](http://www.infragistics.com/community/blogs/dhananjay_kumar/archive/2015/06/30/simplifying-the-liskov-substitution-principle-of-solid-in-c.aspx)|Dhananjay Kumar|Infragistics|
