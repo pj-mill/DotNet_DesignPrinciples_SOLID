@@ -123,9 +123,12 @@ One should Depend upon abstractions, not on concretions.
 DIP helps decouple your code. The frequency of the ‘new’ keyword in your code is a rough estimate of the degree of coupling in your object structure.
 
 #### THE PROBLEM
+Check out the 'Problem' folder in the 'DependencyInversionPrinciple' project
 
 
 #### THE SOLUTION
+Check out the 'Solution' folder in the 'DependencyInversionPrinciple' project
+
 
 ---
 
