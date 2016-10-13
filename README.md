@@ -25,10 +25,10 @@ Keep in mind that there’s probably no design that guarantees that you won’t 
 #### DEFINITION
 A class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class).
 
-SRP is strongly related to what is called Separation of Concerns (SoC)
+SRP is strongly related to what is called Separation of Concerns (SoC).
 
 #### THE PROBLEM
-Check out the 'Order' class under the 'Problem' folder in the 'SingleResponsibilityPrinciple' project
+Check out the 'Order' class under the 'Problem' folder in the 'SingleResponsibilityPrinciple' project.
 
 This class is trying to do the following
 
@@ -52,7 +52,7 @@ Software entities should be open for extension, but closed for modification.
 
 
 #### THE PROBLEM
-Check out the 'ShoppingCart' class under the 'Problem' folder in the 'OpenClosedPrinciple' project
+Check out the 'ShoppingCart' class under the 'Problem' folder in the 'OpenClosedPrinciple' project.
 
 The problem lies with the 'TotalAmount' function. It uses several IF/ELSE statements to decide how to calculate the price total. 
 
@@ -82,14 +82,14 @@ i.e. you should be able to use any derived class instead of a parent class and h
 We should be familiar with the ‘IS-A’ relationship between a base class and a derived class: a Dog is an Animal, a Clerk is an Employee which is a Person, a Car is a vehicle etc. LSP refines this relationship with ‘IS-SUBSTITUTABLE-FOR’, meaning that an object is substitutable with another object in all situations without running into exceptions and unexpected behaviour.
 
 #### THE PROBLEM
-Check out the 'Problem' folder in the 'LiskovSubstitutionPrinciple' project
+Check out the 'Problem' folder in the 'LiskovSubstitutionPrinciple' project.
 
 We have 2 classes 'Rectangle' and'Square'. Square derives from rectangle which has length and width properties along with a method that calculates the area.
 
 Although both are quadrilaterals, the area is calculated differently. This means that even though the Square class is a subset of the Rectangle class, the Object of Rectangle class is not substitutable by object of the Square class without causing a problem in the system.
 
 #### THE SOLUTION
-Check out the 'Solution' folder in the 'LiskovSubstitutionPrinciple' project
+Check out the 'Solution' folder in the 'LiskovSubstitutionPrinciple' project.
 
 We created a common abstract class that both the rectangle and square objects derive from. This abstract class contains a method to calculate the area that lets each shape define its own area.
 
@@ -98,19 +98,19 @@ We created a common abstract class that both the rectangle and square objects de
 ### Interface Segregation Principle (ISP)
 
 #### DEFINITION
-Many client-specific interfaces are better than one general-purpose interface
+Many client-specific interfaces are better than one general-purpose interface.
 
 If a base class defines two abstract methods then a derived class must give meaningful implementations of both. If a derived class implements a method with ‘throw new NotImplementedException’ then it means that the derived class is not fully substitutable for its base class. In that case you’ll probably need to reconsider your class hierarchy.
 
 #### THE PROBLEM
-Check out the 'Problem' folder in the 'InterfaceSegregationPrinciple' project
+Check out the 'Problem' folder in the 'InterfaceSegregationPrinciple' project.
 
 We have 3 classes, 'ApplicationSettings', 'UserSettings', and 'ReadOnlySettings'. All of which implements the 'ISettings' interface that contains 2 methods; 'Load' and 'Persist'.
 
 The problem lies with the 'ReadOnlySettings' class in that it does not require the 'Persist' method, and so throws a 'NotImplementedException' instead which violates ISP.
 
 #### THE SOLUTION
-Check out the 'Solution' folder in the 'InterfaceSegregationPrinciple' project
+Check out the 'Solution' folder in the 'InterfaceSegregationPrinciple' project.
 
 We split the 'ISettings' interface into 2 specific interfaces 'IReadSettings' and 'IWriteSettings'. 'ApplicationSettings' and 'UserSettings' classes implement both interfaces however, 'ReadOnlySettings' only implements the 'IReadSettings' interface.
 
