@@ -125,6 +125,8 @@ DIP helps decouple your code. The frequency of the ‘new’ keyword in your cod
 #### THE PROBLEM
 Check out the 'Problem' folder in the 'DependencyInversionPrinciple' project
 
+1. 'ProductService' class is tightly coupled to both the 'ProductDiscount' & 'ProductRepository' classes. It also breaks the Single Responsibility Principle as it must also create instances of these classes.
+2. The 'Product' class is tightly coupled to the 'ProductDiscount' class.
 
 #### THE SOLUTION
 Check out the 'Solution' folder in the 'DependencyInversionPrinciple' project
