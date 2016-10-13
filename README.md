@@ -128,7 +128,7 @@ Check out the 'Problem' folder in the 'DependencyInversionPrinciple' project
 1. 'ProductService' class is tightly coupled to both the 'ProductDiscount' & 'ProductRepository' classes. It also breaks the Single Responsibility Principle as it must also create instances of these classes.
 2. The 'Product' class is tightly coupled to the 'ProductDiscount' class. 
 
-Aslo: What if we want to use different discounts down the line ? how would we implement them ? What if we needed to change the repository used by the service ?
+Also: What if we want to use different discounts down the line ? how would we implement them ? What if we needed to change the repository used by the service ?
 
 To test, we must ensure that the ProductDiscount and ProductRepository objects are in a valid state and perform as they are expected to,so that the test result does not depend on them. 
 
@@ -137,8 +137,9 @@ If the ProductService sends an email then even the unit test call must send an e
 #### THE SOLUTION
 Check out the 'Solution' folder in the 'DependencyInversionPrinciple' project
 
-Abstraction is the key. We can use either interfaces or abstract classes for this.
+Abstraction is the key. We can use either interfaces or abstract classes for this. We could also implement Dependency Injection (DI / IoC) using Ninject, Unity, CastleWindsor, etc, but that's outside the scope of this exercise.
 
+We replaced the references to concrete classes with references to interfaces and abstract classes. These are injected into the services and domains that require them  (using constructor & method injection), meaning that if we need to swap them out at a later stage with another implementation, we can do so easily so long as that implementation derives from the same interface or abstract class. 
 
 ---
 
