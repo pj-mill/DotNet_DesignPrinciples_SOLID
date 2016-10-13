@@ -126,10 +126,18 @@ DIP helps decouple your code. The frequency of the ‘new’ keyword in your cod
 Check out the 'Problem' folder in the 'DependencyInversionPrinciple' project
 
 1. 'ProductService' class is tightly coupled to both the 'ProductDiscount' & 'ProductRepository' classes. It also breaks the Single Responsibility Principle as it must also create instances of these classes.
-2. The 'Product' class is tightly coupled to the 'ProductDiscount' class.
+2. The 'Product' class is tightly coupled to the 'ProductDiscount' class. 
+
+Aslo: What if we want to use different discounts down the line ? how would we implement them ? What if we needed to change the repository used by the service ?
+
+To test, we must ensure that the ProductDiscount and ProductRepository objects are in a valid state and perform as they are expected to,so that the test result does not depend on them. 
+
+If the ProductService sends an email then even the unit test call must send an email in order for the test to pass. If the emailing service is not available when the test runs then your test will fail regardless of the true business logic of the method under test
 
 #### THE SOLUTION
 Check out the 'Solution' folder in the 'DependencyInversionPrinciple' project
+
+Abstraction is the key. We can use either interfaces or abstract classes for this.
 
 
 ---
